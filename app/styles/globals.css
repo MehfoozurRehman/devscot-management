@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #6c5cdb;
+  --primaryDark: #6350dd;
+  --secondary: #6c5cdb;
+  --secondaryDark: #6350dd;
+}
+
+body {
+  background-color: #0e0e0e;
+  color: white;
+}
+h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+.container__main {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
