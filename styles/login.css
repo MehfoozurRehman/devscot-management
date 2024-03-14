@@ -1,0 +1,31 @@
+.container__main__login {
+  width: 550px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--backgroundDarkColor);
+  padding: 3em 2em;
+  border-radius: 10px;
+  align-items: center;
+}
+.container__main__login__heading {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--primary);
+}
+.container__main__login__google {
+  width: 50%;
+}
+.container__main__login__text {
+  margin: 1em 0em;
+}
+
+.container__main__login__text a {
+  text-decoration: none;
+  color: var(--primary);
+  transition: all 0.3s ease-in-out;
+}
+
+.container__main__login__text a:hover {
+  color: var(--secondary);
+  text-decoration: underline;
+}
