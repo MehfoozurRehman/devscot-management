@@ -1,0 +1,44 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary: #6c5cdb;
+  --primaryDark: #6350dd;
+  --secondary: #6c5cdb;
+  --secondaryDark: #6350dd;
+  --backgroundColor: #151719;
+  --backgroundDarkColor: #1c2024;
+}
+
+body {
+  background-color: var(--backgroundColor);
+  color: white;
+}
+
+.container__main {
+  height: 100vh;
+  width: 100%;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: var(--backgroundDarkColor);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primaryDark);
+}
