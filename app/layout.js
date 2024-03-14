@@ -1,5 +1,4 @@
-import "./globals.css";
-
+import "../styles/globals.css";
 import { Inter } from "next/font/google";
 import dbConnect from "@/lib/dbConnect";
 
@@ -11,7 +10,7 @@ export const metadata = {
 };
 
 export default async function RootLayout({ children }) {
-  await dbConnect();
+  // await dbConnect();
 
   return (
     <html lang="en">
