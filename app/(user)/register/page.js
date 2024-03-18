@@ -25,9 +25,10 @@ export default function Register() {
           />
         </div>
         <div className="container__main__login__text">
-          Already have an account? <Link href={"login"}>Login</Link>
+          Already have an account? <Link href={"/"}>Login</Link>
         </div>
       </div>
     </div>
   );
+  container__main__login__google;
 }
