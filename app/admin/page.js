@@ -36,7 +36,7 @@ export default async function ListOfUsers() {
           <div className="container__main__users__top__date">
             <input
               type="date"
-              value={`${new Date().toISOString().split("T")[0]}`}
+              defaultValue={`${new Date().toISOString().split("T")[0]}`}
               max={`${new Date().toISOString().split("T")[0]}`}
             />
           </div>
