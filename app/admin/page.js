@@ -26,10 +26,21 @@ export default async function ListOfUsers() {
     };
   });
 
+  console.log(new Date().toLocaleString().split(",")[0]);
+
   return (
     <div className="container__main">
       <div className="container__main__users">
-        <div className="container__main__users__heading">Users</div>
+        <div className="container__main__users__top">
+          <div className="container__main__users__top__heading">Users</div>
+          <div className="container__main__users__top__date">
+            <input
+              type="date"
+              value={`${new Date().toISOString().split("T")[0]}`}
+              max={`${new Date().toISOString().split("T")[0]}`}
+            />
+          </div>
+        </div>
         <div className="container__main__users__table">
           <div className="container__main__users__table__header">
             <div className="container__main__users__table__header__entry">
@@ -42,19 +53,19 @@ export default async function ListOfUsers() {
               Name
             </div>
             <div className="container__main__users__table__header__entry">
-              Name
+              Check In
             </div>
             <div className="container__main__users__table__header__entry">
-              Name
+              Check Out
             </div>
           </div>
           <div className="container__main__users__table__body">
             <Link
-              href={"detail"}
+              href={"admin/detail"}
               className="container__main__users__table__body__row"
             >
               <div className="container__main__users__table__body__row__entry">
-                Ali
+                Ali Akbar
               </div>
               <div className="container__main__users__table__body__row__entry">
                 Ali
@@ -70,7 +81,7 @@ export default async function ListOfUsers() {
               </div>
             </Link>
             <Link
-              href={"detail"}
+              href={"admin/detail"}
               className="container__main__users__table__body__row"
             >
               <div className="container__main__users__table__body__row__entry">
