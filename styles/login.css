@@ -29,3 +29,12 @@
   color: var(--secondary);
   text-decoration: underline;
 }
+
+@media (max-width: 500px) {
+  .container__main__login {
+    width: 100%;
+  }
+  .container__main__login__google {
+    width: 100%;
+  }
+}
