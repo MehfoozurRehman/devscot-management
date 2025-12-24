@@ -9,14 +9,14 @@ importers:
   .:
     dependencies:
       '@react-oauth/google':
-        specifier: ^0.12.2
-        version: 0.12.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^0.13.4
+        version: 0.13.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       jwt-decode:
         specifier: ^4.0.0
         version: 4.0.0
       mongoose:
-        specifier: ^8.20.3
-        version: 8.20.3
+        specifier: ^8.20.4
+        version: 8.20.4
       next:
         specifier: 14.2.35
         version: 14.2.35(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -96,8 +96,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@react-oauth/google@0.12.2':
-    resolution: {integrity: sha512-d1GVm2uD4E44EJft2RbKtp8Z1fp/gK8Lb6KHgs3pHlM0PxCXGLaq8LLYQYENnN4xPWO1gkL4apBtlPKzpLvZwg==}
+  '@react-oauth/google@0.13.4':
+    resolution: {integrity: sha512-hGKyNEH+/PK8M0sFEuo3MAEk0txtHpgs94tDQit+s2LXg7b6z53NtzHfqDvoB2X8O6lGB+FRg80hY//X6hfD+w==}
     peerDependencies:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
@@ -217,8 +217,8 @@ packages:
       socks:
         optional: true
 
-  mongoose@8.20.3:
-    resolution: {integrity: sha512-AQk63Ry4YM/lWJRt/D5P7UiRjKT+z+vD0NkNKgeQ35TioBC7kuI6wBzhu6/kyrNXg+WotFidW1icEWLNC1rUfg==}
+  mongoose@8.20.4:
+    resolution: {integrity: sha512-o4ABeT3IEk1Z4dGt3XjHJ0x9OjyWvakC1+btPpzWqCovqyidKGdbB05/g87cdh7AuWXFQKHOxt+L/OZOBps4hw==}
     engines: {node: '>=16.20.1'}
 
   mpath@0.9.0:
@@ -371,7 +371,7 @@ snapshots:
   '@next/swc-win32-x64-msvc@14.2.33':
     optional: true
 
-  '@react-oauth/google@0.12.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@react-oauth/google@0.13.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
@@ -455,7 +455,7 @@ snapshots:
       bson: 6.10.4
       mongodb-connection-string-url: 3.0.2
 
-  mongoose@8.20.3:
+  mongoose@8.20.4:
     dependencies:
       bson: 6.10.4
       kareem: 2.6.3
