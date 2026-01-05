@@ -15,8 +15,8 @@ importers:
         specifier: ^4.0.0
         version: 4.0.0
       mongoose:
-        specifier: ^8.20.4
-        version: 8.20.4
+        specifier: ^8.21.0
+        version: 8.21.0
       next:
         specifier: 14.2.35
         version: 14.2.35(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -217,8 +217,8 @@ packages:
       socks:
         optional: true
 
-  mongoose@8.20.4:
-    resolution: {integrity: sha512-o4ABeT3IEk1Z4dGt3XjHJ0x9OjyWvakC1+btPpzWqCovqyidKGdbB05/g87cdh7AuWXFQKHOxt+L/OZOBps4hw==}
+  mongoose@8.21.0:
+    resolution: {integrity: sha512-dW2U01gN8EVQT5KAO5AkzjbqWc8A/CsEq15jOzq/M9ISpy8jw3iq7W9ZP135h9zykFOMt3AMxq4+anvt2YNJgw==}
     engines: {node: '>=16.20.1'}
 
   mpath@0.9.0:
@@ -455,7 +455,7 @@ snapshots:
       bson: 6.10.4
       mongodb-connection-string-url: 3.0.2
 
-  mongoose@8.20.4:
+  mongoose@8.21.0:
     dependencies:
       bson: 6.10.4
       kareem: 2.6.3
