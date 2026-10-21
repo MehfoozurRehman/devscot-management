@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# devscot-management
 
-## Getting Started
+A Next.js app where staff sign in with Google, backed by MongoDB, with an admin area and attendance views.
 
-First, run the development server:
+**Status:** In progress. Google sign-in, the MongoDB models and the user and admin pages are in place, but the middleware that protects the dashboard is commented out.
+
+## The problem
+
+The code is for staff accounts and attendance management. Staff sign in with their Google account, and admins can look at individual users. The data model covers attendance check-ins and check-outs, and a messages collection.
+
+## What it does
+
+- **Google sign-in.** `actions/auth.js` has `registerWithGoogle` and `loginWithGoogle` server actions. They decode the Google credential with `jwt-decode` and create or find a user by Google subject.
+- **Staff dashboard.** A dashboard under `app/(user)/dashboard`.
+- **Admin area.** `app/admin` with a per-user page at `app/admin/[user]`.
+- **Account pages.** Routes for invite, create password, forgot password and change password (`app/invite`, `app/create_password`, `app/forgot_password`, `app/change_password`).
+- **Data models.** Mongoose models for users, attendance and messages in `models/`.
+
+## How it's built
+
+- Next.js App Router in JavaScript, with `@react-oauth/google` on the client.
+- Mongoose models in `models/`, with a connection helper in `lib/dbConnect.js`.
+- A session cookie named `token` is set from a server action (`cookies()` from `next/headers`).
+- `middleware.js` is meant to redirect unauthenticated requests away from `/dashboard/*`.
+
+## Running it locally
+
+Uses pnpm (there is a `pnpm-lock.yaml`).
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
+pnpm build
+pnpm start
+pnpm lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## What's left
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- The redirect in `middleware.js` is commented out, so `/dashboard` is not protected. The middleware also logs the token cookie to the console.
+- The MongoDB URI check in `lib/dbConnect.js` is commented out.
+- Several pages were left from the `create-next-app` template.
+- No automated tests.
